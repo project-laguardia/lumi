@@ -1,0 +1,21 @@
+rules:
+  type-enum:
+    - 2
+    - always
+    - - build     # build system changes
+      - infra     # CI/CD, VCS, deployment, etc.
+
+      - docs      # non-meta documentation changes
+      - meta      # meta documentation changes
+
+      - feat      # new feature
+      - refactor  # refactor without introducing new features
+      - fix       # "fixes issue #123" or "fixes #123"
+      - revert    # "reverts commit <hash/head>" or "reverts <hash/head>"
+      - perf      # performance improvement
+
+      - test      # add, update, or work on tests
+      - clean     # formatting, linting, etc. (not limited to style)
+      - style     # non-cleaning non-refactor formatting changes
+      
+      # - chore   # chore is deprecated - if you need another type, submit a PR to add it

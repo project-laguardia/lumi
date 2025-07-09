@@ -1,0 +1,5 @@
+# IDE files, feel free to submit a PR and add your IDE
+.vscode/
+
+# Porting
+luci/*
