@@ -7,7 +7,7 @@ A LuCI port from `uci` to `mgmt`.
 The gitignore is already configured to ignore the `luci` directory. To start porting, you can clone `luci` to that location:
 
 ```pwsh
-git clone https://github.com/openwrt/luci
+git clone https://github.com/openwrt/luci ./luci
 ```
 
 To read up on how `luci` is built, you can start here:
