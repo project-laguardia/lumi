@@ -2,6 +2,18 @@
 
 A LuCI port from `uci` to `mgmt`.
 
+# Contributing
+
+Contributions are welcome! Please read over the commit rules in [./commitlintrc.yml](./commitlintrc.yaml). We do deviate from Angular's commit rules slightly. Most notably, we deprecate `chore` in favor of `infra` for infrastructure tooling, `meta` for manifest changes like `package.json`, `cargo.toml`, etc., and `devtools` for devtool-writing not covered by `infra`.
+- An example change warranting `infra` would be changes to `.github`
+- An example change warranting `meta` would be changes to `.gitignore`, `.commitlintrc.yml`, or `package.json`
+- An example change warranting `devtools` would be changes to `porting/~search.ps1`
+
+_Scoping is recommended._ At this time, we do _not_ enforce scoping in any manner, but here are some well-known scopes for this project:
+- `readme` for changes to the README
+- `porting` typically documentation changes made to PORTING.md or to the `porting` directory
+- `vcs` for changes to the version control system, such as `.gitignore` or modifying `.commitlintrc.yml`
+
 # Porting
 
 The gitignore is already configured to ignore the `luci` directory. If needed, you can clone `luci` to that location if you need to reference its source or build files.

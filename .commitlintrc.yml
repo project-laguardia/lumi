@@ -4,9 +4,10 @@ rules:
     - always
     - - build     # build system changes
       - infra     # CI/CD, VCS, deployment, etc.
+      - devtools  # developer tools not covered by `infra`
 
       - docs      # non-meta documentation changes
-      - meta      # meta documentation changes
+      - meta      # meta documentation changes or manifest-related changes
 
       - feat      # new feature
       - refactor  # refactor without introducing new features
