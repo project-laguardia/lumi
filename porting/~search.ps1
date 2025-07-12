@@ -1,5 +1,5 @@
 param(
-    [switch] $FunctionOnly
+    [switch] $FunctionOnly,
     [switch] $Verbose
 )
 
