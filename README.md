@@ -4,7 +4,7 @@ A LuCI port from `uci` to `mgmt`.
 
 # Contributing
 
-Contributions are welcome! Please read over the commit rules in [./commitlintrc.yml](./commitlintrc.yaml). We do deviate from Angular's commit rules slightly. Most notably, we deprecate `chore` in favor of `infra` for infrastructure tooling, `meta` for manifest changes like `package.json`, `cargo.toml`, etc., and `devtools` for devtool-writing not covered by `infra`.
+Contributions are welcome! Please read over the `type-enum` rule in [./commitlintrc.yml](./commitlintrc.yaml). We do deviate from Angular's commit rules slightly. Most notably, we deprecate `chore` in favor of `infra` for infrastructure tooling, `meta` for manifest changes like `package.json`, `cargo.toml`, etc., and `devtools` for devtool-writing not covered by `infra`.
 - An example change warranting `infra` would be changes to `.github`
 - An example change warranting `meta` would be changes to `.gitignore`, `.commitlintrc.yml`, or `package.json`
 - An example change warranting `devtools` would be changes to `porting/~search.ps1`
