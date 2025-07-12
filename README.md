@@ -24,6 +24,21 @@ git clone https://github.com/openwrt/luci ./luci
 
 My work with porting will be logged in `PORTING.md` show casing my active work. For archived work, you can see the `porting` directory.
 
+## Tools
+
+The following tools have been added to the project to help with porting:
+
+- [~search.ps1](./porting/~search.ps1): A PowerShell script that searches the `luci` source code for a given pattern. It is useful for finding how LuCI interacts with `uci` and other components.
+  - Usage:
+    - `.\porting\~search.ps1 -Verbose` to run the default searches (which update `.\porting\searches\`)
+    - `.\porting\~search.ps1 -FunctionOnly; Find-InSource -Pattern "luci.model.uci" -Verbose` to search for the `luci.model.uci` module in the source code
+  - `Find-InSource` Usage:
+    - `-Pattern` is the pattern to search for in the source code
+    - `-Repository` is the path to the repository to search in relative to cwd
+    - `-Extensions` is an array of file extensions to search in (default: `.lua`, `.c`, `.js`, `.mjs`)
+    - `-Verbose` by default, `Find-InSource` is silent. If you want to see the files being searched, you can pass this flag.
+    - returns an ordered dictionary of files mapped to an ordered dictionary of lines containing the requested pattern. Useful for serializing to JSON.
+
 # Building
 
 To read up on how `luci` is built, you can start here (but please reference the OpenWRT SDK section below for more info on how the SDK works):
